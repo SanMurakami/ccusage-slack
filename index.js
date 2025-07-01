@@ -113,8 +113,8 @@ function getLatestMonthCost(data) {
     throw new Error('No monthly data available');
   }
   
-  // Get the latest month (should be the first item if sorted by date)
-  const latestMonth = data.monthly[0];
+  // Get the latest month (last item in the array)
+  const latestMonth = data.monthly[data.monthly.length - 1];
   return {
     totalCost: latestMonth.totalCost,
     month: latestMonth.month
